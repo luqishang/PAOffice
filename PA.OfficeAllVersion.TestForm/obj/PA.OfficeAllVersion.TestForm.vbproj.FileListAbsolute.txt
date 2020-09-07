@@ -1,0 +1,14 @@
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion.TestForm\bin\Debug\templete.xls
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion.TestForm\bin\Debug\PA.OfficeAllVersion.TestForm.exe
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion.TestForm\bin\Debug\PA.OfficeAllVersion.TestForm.pdb
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion.TestForm\bin\Debug\PA.OfficeAllVersion.TestForm.xml
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion.TestForm\bin\Debug\PA.Office.dll
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion.TestForm\bin\Debug\PA.Office.pdb
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion.TestForm\bin\Debug\PA.Office.xml
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\ResolveAssemblyReference.cache
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.Form1.resources
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.Resources.resources
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.vbproj.GenerateResource.Cache
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.exe
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.xml
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.pdb

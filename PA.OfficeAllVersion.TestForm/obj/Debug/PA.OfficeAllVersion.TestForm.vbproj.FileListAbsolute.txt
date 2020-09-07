@@ -1,0 +1,32 @@
+D:\Old Source\PA.Office\PA.OfficeAllVersion.TestForm\bin\Debug\templete.xls
+D:\Old Source\PA.Office\PA.OfficeAllVersion.TestForm\bin\Debug\PA.OfficeAllVersion.TestForm.exe
+D:\Old Source\PA.Office\PA.OfficeAllVersion.TestForm\bin\Debug\PA.OfficeAllVersion.TestForm.pdb
+D:\Old Source\PA.Office\PA.OfficeAllVersion.TestForm\bin\Debug\PA.OfficeAllVersion.TestForm.xml
+D:\Old Source\PA.Office\PA.OfficeAllVersion.TestForm\bin\Debug\PA.Office.dll
+D:\Old Source\PA.Office\PA.OfficeAllVersion.TestForm\bin\Debug\PA.Office.pdb
+D:\Old Source\PA.Office\PA.OfficeAllVersion.TestForm\bin\Debug\PA.Office.xml
+D:\Old Source\PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.vbprojAssemblyReference.cache
+D:\Old Source\PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.Form1.resources
+D:\Old Source\PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.Resources.resources
+D:\Old Source\PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.vbproj.GenerateResource.cache
+D:\Old Source\PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.vbproj.CoreCompileInputs.cache
+D:\Old Source\PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.vbproj.CopyComplete
+D:\Old Source\PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.exe
+D:\Old Source\PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.xml
+D:\Old Source\PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.pdb
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\bin\Debug\templete.xls
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\bin\Debug\PA.OfficeAllVersion.TestForm.exe
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\bin\Debug\PA.OfficeAllVersion.TestForm.pdb
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\bin\Debug\PA.OfficeAllVersion.TestForm.xml
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\bin\Debug\PA.Office.dll
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\bin\Debug\PA.Office.pdb
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\bin\Debug\PA.Office.xml
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.vbprojAssemblyReference.cache
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.Form1.resources
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.Resources.resources
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.vbproj.GenerateResource.cache
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.vbproj.CoreCompileInputs.cache
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.vbproj.CopyComplete
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.exe
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.xml
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\obj\Debug\PA.OfficeAllVersion.TestForm.pdb

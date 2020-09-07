@@ -1,0 +1,9 @@
+bin\Debug\PA.Office.dll
+bin\Debug\PA.Office.pdb
+bin\Debug\PA.Office.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\PA.Office.Resources.resources
+obj\Debug\PA.OfficeAllVersion.vbproj.GenerateResource.Cache
+obj\Debug\PA.Office.dll
+obj\Debug\PA.Office.xml
+obj\Debug\PA.Office.pdb

@@ -1,0 +1,9 @@
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion\bin\Debug\PA.Office.dll
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion\bin\Debug\PA.Office.pdb
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion\bin\Debug\PA.Office.xml
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion\obj\Debug\ResolveAssemblyReference.cache
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion\obj\Debug\PA.Office.Resources.resources
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion\obj\Debug\PA.OfficeAllVersion.vbproj.GenerateResource.Cache
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion\obj\Debug\PA.Office.dll
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion\obj\Debug\PA.Office.xml
+C:\Visual Studio Solutions\Proassist\PA.Office\PA.OfficeAllVersion\obj\Debug\PA.Office.pdb

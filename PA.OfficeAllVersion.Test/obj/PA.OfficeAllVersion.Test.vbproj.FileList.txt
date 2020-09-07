@@ -1,0 +1,17 @@
+bin\Debug\test.xls
+bin\Debug\PA.OfficeAllVersion.Test.dll
+bin\Debug\PA.OfficeAllVersion.Test.pdb
+bin\Debug\PA.Office.Test.xml
+bin\Debug\MbUnit.Framework.dll
+bin\Debug\nunit.framework.dll
+bin\Debug\PA.Office.dll
+bin\Debug\QuickGraph.Algorithms.dll
+bin\Debug\QuickGraph.dll
+bin\Debug\PA.Office.pdb
+bin\Debug\PA.Office.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\PA.Office.Resources.resources
+obj\Debug\PA.OfficeAllVersion.Test.vbproj.GenerateResource.Cache
+obj\Debug\PA.OfficeAllVersion.Test.dll
+obj\Debug\PA.Office.Test.xml
+obj\Debug\PA.OfficeAllVersion.Test.pdb

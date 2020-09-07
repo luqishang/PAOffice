@@ -1,0 +1,14 @@
+obj\Debug\PA.OfficeAllVersion.TestForm.exe
+obj\Debug\PA.OfficeAllVersion.TestForm.xml
+obj\Debug\PA.OfficeAllVersion.TestForm.pdb
+bin\Debug\templete.xls
+bin\Debug\PA.OfficeAllVersion.TestForm.exe
+bin\Debug\PA.OfficeAllVersion.TestForm.pdb
+bin\Debug\PA.OfficeAllVersion.TestForm.xml
+bin\Debug\PA.Office.dll
+bin\Debug\PA.Office.pdb
+bin\Debug\PA.Office.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\PA.OfficeAllVersion.TestForm.Form1.resources
+obj\Debug\PA.OfficeAllVersion.TestForm.Resources.resources
+obj\Debug\PA.OfficeAllVersion.TestForm.vbproj.GenerateResource.Cache

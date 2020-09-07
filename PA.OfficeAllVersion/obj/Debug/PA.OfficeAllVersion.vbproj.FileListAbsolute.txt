@@ -1,0 +1,20 @@
+D:\Old Source\PA.Office\PA.OfficeAllVersion\bin\Debug\PA.Office.dll
+D:\Old Source\PA.Office\PA.OfficeAllVersion\bin\Debug\PA.Office.pdb
+D:\Old Source\PA.Office\PA.OfficeAllVersion\bin\Debug\PA.Office.xml
+D:\Old Source\PA.Office\PA.OfficeAllVersion\obj\Debug\PA.OfficeAllVersion.vbprojAssemblyReference.cache
+D:\Old Source\PA.Office\PA.OfficeAllVersion\obj\Debug\PA.Office.Resources.resources
+D:\Old Source\PA.Office\PA.OfficeAllVersion\obj\Debug\PA.OfficeAllVersion.vbproj.GenerateResource.cache
+D:\Old Source\PA.Office\PA.OfficeAllVersion\obj\Debug\PA.OfficeAllVersion.vbproj.CoreCompileInputs.cache
+D:\Old Source\PA.Office\PA.OfficeAllVersion\obj\Debug\PA.Office.dll
+D:\Old Source\PA.Office\PA.OfficeAllVersion\obj\Debug\PA.Office.xml
+D:\Old Source\PA.Office\PA.OfficeAllVersion\obj\Debug\PA.Office.pdb
+D:\Project\2_PA.Office\PA.OfficeAllVersion\bin\Debug\PA.Office.dll
+D:\Project\2_PA.Office\PA.OfficeAllVersion\bin\Debug\PA.Office.pdb
+D:\Project\2_PA.Office\PA.OfficeAllVersion\bin\Debug\PA.Office.xml
+D:\Project\2_PA.Office\PA.OfficeAllVersion\obj\Debug\PA.OfficeAllVersion.vbproj.ResolveComReference.cache
+D:\Project\2_PA.Office\PA.OfficeAllVersion\obj\Debug\PA.Office.Resources.resources
+D:\Project\2_PA.Office\PA.OfficeAllVersion\obj\Debug\PA.OfficeAllVersion.vbproj.GenerateResource.cache
+D:\Project\2_PA.Office\PA.OfficeAllVersion\obj\Debug\PA.OfficeAllVersion.vbproj.CoreCompileInputs.cache
+D:\Project\2_PA.Office\PA.OfficeAllVersion\obj\Debug\PA.Office.dll
+D:\Project\2_PA.Office\PA.OfficeAllVersion\obj\Debug\PA.Office.xml
+D:\Project\2_PA.Office\PA.OfficeAllVersion\obj\Debug\PA.Office.pdb

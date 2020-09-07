@@ -1,0 +1,38 @@
+D:\Old Source\PA.Office\PA.OfficeAllVersion.Test\bin\Debug\test.xls
+D:\Old Source\PA.Office\PA.OfficeAllVersion.Test\bin\Debug\PA.OfficeAllVersion.Test.dll
+D:\Old Source\PA.Office\PA.OfficeAllVersion.Test\bin\Debug\PA.OfficeAllVersion.Test.pdb
+D:\Old Source\PA.Office\PA.OfficeAllVersion.Test\bin\Debug\PA.Office.Test.xml
+D:\Old Source\PA.Office\PA.OfficeAllVersion.Test\bin\Debug\MbUnit.Framework.dll
+D:\Old Source\PA.Office\PA.OfficeAllVersion.Test\bin\Debug\nunit.framework.dll
+D:\Old Source\PA.Office\PA.OfficeAllVersion.Test\bin\Debug\PA.Office.dll
+D:\Old Source\PA.Office\PA.OfficeAllVersion.Test\bin\Debug\QuickGraph.Algorithms.dll
+D:\Old Source\PA.Office\PA.OfficeAllVersion.Test\bin\Debug\QuickGraph.dll
+D:\Old Source\PA.Office\PA.OfficeAllVersion.Test\bin\Debug\PA.Office.pdb
+D:\Old Source\PA.Office\PA.OfficeAllVersion.Test\bin\Debug\PA.Office.xml
+D:\Old Source\PA.Office\PA.OfficeAllVersion.Test\obj\Debug\PA.OfficeAllVersion.Test.vbprojAssemblyReference.cache
+D:\Old Source\PA.Office\PA.OfficeAllVersion.Test\obj\Debug\PA.Office.Resources.resources
+D:\Old Source\PA.Office\PA.OfficeAllVersion.Test\obj\Debug\PA.OfficeAllVersion.Test.vbproj.GenerateResource.cache
+D:\Old Source\PA.Office\PA.OfficeAllVersion.Test\obj\Debug\PA.OfficeAllVersion.Test.vbproj.CoreCompileInputs.cache
+D:\Old Source\PA.Office\PA.OfficeAllVersion.Test\obj\Debug\PA.OfficeAllVersion.Test.vbproj.CopyComplete
+D:\Old Source\PA.Office\PA.OfficeAllVersion.Test\obj\Debug\PA.OfficeAllVersion.Test.dll
+D:\Old Source\PA.Office\PA.OfficeAllVersion.Test\obj\Debug\PA.Office.Test.xml
+D:\Old Source\PA.Office\PA.OfficeAllVersion.Test\obj\Debug\PA.OfficeAllVersion.Test.pdb
+D:\Project\2_PA.Office\PA.OfficeAllVersion.Test\bin\Debug\test.xls
+D:\Project\2_PA.Office\PA.OfficeAllVersion.Test\bin\Debug\PA.OfficeAllVersion.Test.dll
+D:\Project\2_PA.Office\PA.OfficeAllVersion.Test\bin\Debug\PA.OfficeAllVersion.Test.pdb
+D:\Project\2_PA.Office\PA.OfficeAllVersion.Test\bin\Debug\PA.Office.Test.xml
+D:\Project\2_PA.Office\PA.OfficeAllVersion.Test\bin\Debug\MbUnit.Framework.dll
+D:\Project\2_PA.Office\PA.OfficeAllVersion.Test\bin\Debug\nunit.framework.dll
+D:\Project\2_PA.Office\PA.OfficeAllVersion.Test\bin\Debug\PA.Office.dll
+D:\Project\2_PA.Office\PA.OfficeAllVersion.Test\bin\Debug\QuickGraph.Algorithms.dll
+D:\Project\2_PA.Office\PA.OfficeAllVersion.Test\bin\Debug\QuickGraph.dll
+D:\Project\2_PA.Office\PA.OfficeAllVersion.Test\bin\Debug\PA.Office.pdb
+D:\Project\2_PA.Office\PA.OfficeAllVersion.Test\bin\Debug\PA.Office.xml
+D:\Project\2_PA.Office\PA.OfficeAllVersion.Test\obj\Debug\PA.OfficeAllVersion.Test.vbprojAssemblyReference.cache
+D:\Project\2_PA.Office\PA.OfficeAllVersion.Test\obj\Debug\PA.Office.Resources.resources
+D:\Project\2_PA.Office\PA.OfficeAllVersion.Test\obj\Debug\PA.OfficeAllVersion.Test.vbproj.GenerateResource.cache
+D:\Project\2_PA.Office\PA.OfficeAllVersion.Test\obj\Debug\PA.OfficeAllVersion.Test.vbproj.CoreCompileInputs.cache
+D:\Project\2_PA.Office\PA.OfficeAllVersion.Test\obj\Debug\PA.OfficeAllVersion.Test.vbproj.CopyComplete
+D:\Project\2_PA.Office\PA.OfficeAllVersion.Test\obj\Debug\PA.OfficeAllVersion.Test.dll
+D:\Project\2_PA.Office\PA.OfficeAllVersion.Test\obj\Debug\PA.Office.Test.xml
+D:\Project\2_PA.Office\PA.OfficeAllVersion.Test\obj\Debug\PA.OfficeAllVersion.Test.pdb

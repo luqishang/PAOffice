@@ -1,0 +1,1382 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+PA.Office
+</name>
+</assembly>
+<members>
+<member name="T:PA.Office.My.Resources.Resources">
+<summary>
+  ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+</summary>
+</member>
+<member name="P:PA.Office.My.Resources.Resources.ResourceManager">
+<summary>
+  このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+</summary>
+</member>
+<member name="P:PA.Office.My.Resources.Resources.Culture">
+<summary>
+  すべてについて、現在のスレッドの CurrentUICulture プロパティをオーバーライドします
+  現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+</summary>
+</member>
+<member name="T:PA.Office.ExcelHandle">
+ <summary>
+ EXCELファイルを操作するための機能を提供するクラス。
+ </summary>
+ <remarks>
+ <para>このクラスでは、EXCELを操作するためのプロパティおよびメソッドを提供しています。</para>
+ <para>
+ <paramref name="Load" />メソッドを使用すると、EXCELファイルの1ブック1シートを読み込み、このクラスのDataTableに格納します。
+ DataTable編集をして<paramref name="Save" />メソッドを使用すると、EXCELファイルに編集内容を更新します。
+ </para>
+ <para><font color="red">このクラスは旧式です。既存クラスとの互換性のために存在しています。新しくは <seealso>ExcelReader</seealso>を使用して下さい。</font></para>
+ </remarks>
+</member>
+<member name="F:PA.Office.ExcelHandle.MaxRowCount">
+ <summary>
+ Excelの最大行数
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelHandle.#ctor(System.String)">
+ <summary>
+ コンストラクタ。このExcelオブジェクトで操作するEXCELのファイルを指定します。
+ </summary>
+ <param name="filepath">EXCELファイルのフルパス</param>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelHandle.FilePath">
+ <summary>
+ Excelファイルのフルパスを取得、設定します。
+ </summary>
+ <value>Excelファイルのフルパス</value>
+ <returns>Excelファイルのフルパス</returns>
+ <remarks>
+ <para>このオブジェクトで操作するExcelファイルのフルパスを取得、設定します。</para>    
+ <para>この値を変更することにより、読み込み、書き込み対象のファイルを変更します。</para>    
+ </remarks>
+</member>
+<member name="P:PA.Office.ExcelHandle.SheetName">
+ <summary>
+ Excelシートの名前を設定、取得します。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks>
+ <para>Excelシートの名前を設定、または取得します。Loadメソッド実行前は、Null（Visual Basicの場合はNothing）が設定されています。</para>	
+ </remarks>
+</member>
+<member name="P:PA.Office.ExcelHandle.SheetData(System.Int32,System.Int32)">
+ <summary>
+ Excelのセルの内容を設定、取得します。
+ </summary>
+ <param name="row">行番号 1～</param>
+ <param name="col">列番号 1～</param>
+ <value>セルにセットする値</value>
+ <returns>セルから取得した値</returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelHandle.InitializeNewSheet(System.Int32,System.Int32,System.Int32)">
+ <summary>
+ Excelファイルの新規シートを作成します。
+ </summary>
+ <param name="sheetIndex"></param>
+ <param name="columnCount"></param>
+ <param name="rowCount"></param>
+ <remarks>
+ <para>Excelファイルの新規シートを作成します。</para> 
+ <para>編集した内容Save()メソッドにて保存することができます。</para>       
+ </remarks>
+</member>
+<member name="M:PA.Office.ExcelHandle.GetSheetCount">
+ <summary>
+ ブックに登録されているシートの数を取得します。
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelHandle.Load(System.Int32,System.Int32)">
+ <summary>
+ Excelファイルを読み込み、ファイルの内容をこのオブジェクトに展開します。
+ </summary>
+ <param name="sheetIndex">シート番号</param>
+ <param name="columnCount">読み込む列数</param>
+ <remarks>
+ <para>Excelのファイルを読み込みます。値、書式などをこのオブジェクトの配列プロパティにて設定します。</para>
+ <para>行内の全てのセルが空白になった時点で読み込みを終了します。空白行以降の内容は一切読み込まれないことに注意して下さい。</para>	
+ </remarks>
+</member>
+<member name="M:PA.Office.ExcelHandle.Load(System.Int32,System.Int32,System.Int32)">
+ <summary>
+ Excelファイルを読み込み、ファイルの内容をこのクラスに展開します。
+ </summary>
+ <param name="sheetIndex">シート番号</param>    
+ <param name="columnCount">読み込む列数</param>    
+ <param name="rowCount">書き込む列数</param>    
+ <remarks>
+ <para>Excelのファイルを読み込みます。値、書式などをこのオブジェクトの配列プロパティにて設定します。</para>    
+ </remarks>
+</member>
+<member name="M:PA.Office.ExcelHandle.ToString">
+ <summary>
+ このオブジェクトの内容を表す文字列を取得します。
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelHandle.getCellSignature(System.Int32,System.Int32)">
+ <summary>
+ 行と列の番号から、EXCELセル名称を取得します。
+ </summary>
+ <param name="columnCount"></param>
+ <param name="rowCount"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelHandle.GetColumnSignature(System.Int32)">
+ <summary>
+ 列の番号から、EXCEL列名称を取得します。
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:PA.Office.ExcelObjects.ExcelBookControl">
+ <summary>
+ エクセルブックを操作するためのクラス
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.#ctor">
+ <summary>
+ コンストラクタ
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.#ctor(System.String)">
+ <summary>
+ コンストラクタ。読み書きを行なう対象のファイル名を指定します。
+ </summary>
+ <param name="filePath">ファイルパス</param>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelBookControl.FilePath">
+ <summary>
+ ファイルパス
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks>EXCELブックファイルのフルパスを設定、取得します。</remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelBookControl.Sheets">
+ <summary>
+ EXCELシートの内容
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.Load">
+ <summary>
+ EXCELブックを読み込みます（未実装）
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.LoadFrom(System.String)">
+ <summary>
+ 指定のファイルパス（フルパス）のEXCELブックを読み込みます。
+ </summary>
+ <param name="filePath"></param>
+ <remarks>
+ 読み込み範囲を指定するため、読み込みエリアを事前に設定する AddLoadingAreaSetting() メソッドを実行します。
+ 読み込み範囲未設定時、このオブジェクトは何も読まずに処理を終了します。
+ </remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.AddLoadingAreaSetting(System.Int32,System.Int32)">
+ <summary>
+ シートの読み込み範囲を指定します。
+ </summary>
+ <param name="row"></param>
+ <param name="column"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.GetLoadingAreaSettingRow(System.Int32)">
+ <summary>
+ シートの行読み込み範囲を取得します。
+ </summary>
+ <param name="sheetIndex"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.GetLoadingAreaSettingColumn(System.Int32)">
+ <summary>
+ シートの列読み込み範囲を取得します。
+ </summary>
+ <param name="sheetIndex"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.GetLoadingAreaSettingSignature(System.Int32)">
+ <summary>
+ シートの読み込み範囲を取得します。
+ </summary>
+ <param name="sheetIndex"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.Save">
+ <summary>
+ EXCELブックを保存します（未実装）
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.SaveAs(System.String)">
+ <summary>
+ 指定のファイルパスにEXCELブックを保存します。既存ファイルがある場合は、上書き編集します。
+ </summary>
+ <param name="filePath"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.Show">
+ <summary>
+ EXCELアプリケーションを起動し、EXCELブックの内容を表示します。
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.Show(System.String)">
+ <summary>
+ EXCELアプリケーションを起動し、引数で指定したシートの内容を表示します。（未実装）
+ </summary>
+ <param name="sheetName"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.Show(System.Int32)">
+ <summary>
+ EXCELアプリケーションを起動し、引数で指定したシートの内容を表示します。
+ </summary>
+ <param name="sheetIndex"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.LoadAndShow(System.String)">
+ <summary>
+ EXCELブックを読み込み、アプリケーションを起動して表示します。（未実装）
+ </summary>
+ <param name="filePath"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.LoadAndShow(System.String,System.Int32)">
+ <summary>
+ EXCELブックを読み込み、アプリケーションを起動して指定のシートを表示します。（未実装）
+ </summary>
+ <param name="filePath"></param>
+ <param name="sheetIndex"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.LoadAndShow(System.String,System.String)">
+ <summary>
+ EXCELブックを読み込み、アプリケーションを起動して指定のシートを表示します。（未実装）
+ </summary>
+ <param name="filePath"></param>
+ <param name="sheetName"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.GetCellSignature(System.Int32,System.Int32)">
+ <summary>
+ 行と列の番号から、EXCELセル名称を取得します。
+ </summary>
+ <param name="columnCount"></param>
+ <param name="rowCount"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.GetColumnSignature(System.Int32)">
+ <summary>
+ 列の番号から、EXCEL列名称を取得します。
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.SetNameSheetAt(System.Object,System.String)">
+ <summary>
+ EXCELシートに対し名前をセットする
+ </summary>
+ <param name="sheet"></param>
+ <param name="name"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.SetHiddenSheetAt(System.Object,PA.Office.ExcelObjects.ExcelSheetObject)">
+ <summary>
+ EXCELシートを非表示にする
+ </summary>
+ <param name="sheet"></param>
+ <param name="dataSource"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.SetDataSheetAt(System.Object,PA.Office.ExcelObjects.ExcelSheetObject)">
+ <summary>
+ EXCELシートに対しデータをセットする
+ </summary>
+ <param name="sheet">データをセットするEXCELシートオブジェクト</param>		
+ <param name="dataSource">セットするデータを格納しているオブジェクト</param>		
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.SetChartSheetAt(System.Object,System.Object,PA.Office.ExcelObjects.ExcelSheetObject)">
+ <summary>
+ EXCELシートに対しグラフをセットする
+ </summary>
+ <param name="sheet"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelBookControl.GetSheetDataFrom(System.Object,System.Int32,System.Int32)">
+ <summary>
+ EXCELシートからデータを取得する
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:PA.Office.ExcelObjects.ExcelCellObject">
+ <summary>
+ EXCELのセル情報を格納します。
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelCellObject.Value">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelCellObject.OldValue">
+ <summary>
+ ExcelBookControlのLoad()で取得したセルの内容。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelCellObject.Changed">
+ <summary>
+ セルの内容に変更があるときは、True を取得します。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelCellObject.Color">
+ <summary>
+ セルの色
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelCellObject.ColorIndex">
+ <summary>
+ セルの色の番号
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelCellObject.FontColor">
+ <summary>
+ 表す Font の色
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelCellObject.FontColorIndex">
+ <summary>
+ 表す Font の色
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelCellObject.RowIndex">
+ <summary>
+ セルの親行のインデックス
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelCellObject.ColIndex">
+ <summary>
+ セルの列のインデックス
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelCellObject.Range">
+ <summary>
+ セルの列のインデックス
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelCellObject.SetOldValue">
+ <summary>
+ OldValueプロパティに値を設定します。このプロパティは外部アセンブリからの参照はできません。
+ </summary>
+ <value></value>
+ <remarks></remarks>
+</member>
+<member name="T:PA.Office.ExcelObjects.ExcelCellObjectCollection">
+ <summary>
+ EXCELシートのセルのコレクション機能を提供します。
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelCellObjectCollection.Cells(System.Int32)">
+ <summary>
+ EXCELのセルの内容を設定、取得します。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelCellObjectCollection.Count">
+ <summary>
+ EXCELシート行の内容が登録されているセルの個数を取得します。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelCellObjectCollection.Add(PA.Office.ExcelObjects.ExcelCellObject)">
+ <summary>
+ EXCELのセルの内容を追加します。
+ </summary>
+ <param name="cell"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelCellObjectCollection.GetEnumerator">
+ <summary>
+ このコレクションに登録されているセルオブジェクトの列挙を取得します。
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:PA.Office.ExcelObjects.ExcelChartObject">
+ <summary>
+ EXCELのグラフオブジェクトを定義するクラスです。なお、現在は列方向データのみ対応となってます。
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelChartObject.ChartType">
+ <summary>
+ グラフの種類を設定、取得します。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelChartObject.PositionX">
+ <summary>
+ 表示位置（X座標）を設定、取得します。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelChartObject.PositionY">
+ <summary>
+ 表示位置（Y座標）を設定、取得します。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelChartObject.ChartName">
+ <summary>
+ グラフのタイトルを設定、取得します。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelChartObject.DataSourceSheetIndex">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelChartObject.DataSourceStartRowIndex">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelChartObject.DataSourceStartColumnIndex">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelChartObject.DataSourceEndRowIndex">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelChartObject.DataSourceEndColumnIndex">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelChartObject.SetDataSource(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+ <summary>
+ データ範囲を指定します。
+ </summary>
+ <param name="sheetIndex"></param>		
+ <param name="startRowIndex"></param>		
+ <param name="startColumnIndex"></param>		
+ <param name="endRowIndex"></param>		
+ <param name="endColumnIndex"></param>		
+ <remarks></remarks>
+</member>
+<member name="T:PA.Office.ExcelObjects.ExcelChartObjectCollection">
+ <summary>
+ Excelグラフオブジェクトコレクションです。
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelChartObjectCollection.Item(System.Int32)">
+ <summary>
+ 登録されているEXCELグラフオブジェクトを取得します。
+ </summary>
+ <param name="index"></param>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelChartObjectCollection.Count">
+ <summary>
+ 登録されているグラフオブジェクトの個数を取得します。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelChartObjectCollection.Add(PA.Office.ExcelObjects.ExcelChartObject)">
+ <summary>
+ シートに新しくグラフオブジェクトを追加します。
+ </summary>
+ <param name="chart"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelChartObjectCollection.GetEnumerator">
+ <summary>
+ このコレクションが所有しているグラフオブジェクトの列挙を取得します。
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:PA.Office.ExcelObjects.ExcelColumnObject">
+ <summary>
+ EXCELの列定義をするクラスです。
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelColumnObject.#ctor">
+ <summary>
+ このクラスのインスタンスを生成します。
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelColumnObject.#ctor(System.String)">
+ <summary>
+ EXCEL列の定義名を設定し、インスタンスを生成します。
+ </summary>
+ <param name="name"></param>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelColumnObject.Name">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:PA.Office.ExcelObjects.ExcelColumnObjectCollection">
+ <summary>
+ 
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelColumnObjectCollection.Columns(System.Int32)">
+ <summary>
+ EXCELの列の内容を取得します。
+ </summary>
+ <param name="index"></param>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelColumnObjectCollection.Count">
+ <summary>
+ 定義されている列の個数を取得します。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelColumnObjectCollection.Add(PA.Office.ExcelObjects.ExcelColumnObject)">
+ <summary>
+ 列定義を追加します。
+ </summary>
+ <param name="column"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelColumnObjectCollection.GetEnumerator">
+ <summary>
+ このコレクションに登録されている列オブジェクトの列挙を取得します。
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:PA.Office.ExcelObjects.ExcelRowObject">
+ <summary>
+ EXCELブックの行の情報を表すクラスです。
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelRowObject.#ctor(System.Int32)">
+ <summary>
+ コンストラクタ
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelRowObject.Cells">
+ <summary>
+ セルのコレクションを取得します。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:PA.Office.ExcelObjects.ExcelRowObjectCollection">
+ <summary>
+ EXCELシートの行コレクション機能を提供します。
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelRowObjectCollection.Rows(System.Int32)">
+ <summary>
+ EXCELシートの行の情報を取得します。
+ </summary>
+ <param name="index"></param>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelRowObjectCollection.Count">
+ <summary>
+ 登録されているEXCEL行情報のレコード数を取得します。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelRowObjectCollection.Add(PA.Office.ExcelObjects.ExcelRowObject)">
+ <summary>
+ Excelの行を追加します。
+ </summary>
+ <param name="row"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelRowObjectCollection.GetEnumerator">
+ <summary>
+ このコレクションに登録されている行オブジェクトの列挙を取得します。
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:PA.Office.ExcelObjects.ExcelSave">
+ <summary>
+ EXCELファイルをPDFファイルに変換する
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:PA.Office.ExcelObjects.ExcelSheetObject">
+ <summary>
+ EXCELのシートを定義するクラスです。
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelSheetObject.Rows">
+ <summary>
+ 行のコレクションを取得します。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelSheetObject.Charts">
+ <summary>
+ グラフのコレクションを取得します。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelSheetObject.Name">
+ <summary>
+ シートの名前を取得、設定します。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelSheetObject.OldName">
+ <summary>
+ ファイル読み込み時のシートの名前を取得します。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelSheetObject.Visible">
+ <summary>
+ このシートの情報を表示設定します。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks>Falseのとき、このシートは非表示になります。</remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelSheetObject.DisplayGridLine">
+ <summary>
+ このシートの枠線表示設定をします。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelSheetObject.SetOldName">
+ <summary>
+ ファイル読み込み時のシートの名前を設定します。
+ </summary>
+ <value></value>
+ <remarks></remarks>
+</member>
+<member name="T:PA.Office.ExcelObjects.ExcelSheetObjectCollection">
+ <summary>
+ Excelシートの内容を格納するコレクションクラス
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelSheetObjectCollection.Sheets(System.Int32)">
+ <summary>
+ EXCELのシートの情報を取得します。
+ </summary>
+ <param name="index"></param>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelSheetObjectCollection.Count">
+ <summary>
+ このブックに登録されているEXCELシートの数を取得します。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelSheetObjectCollection.Add(PA.Office.ExcelObjects.ExcelSheetObject)">
+ <summary>
+ EXCELのシートを追加します。
+ </summary>
+ <param name="sheet"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelSheetObjectCollection.GetEnumerator">
+ <summary>
+ このコレクションに登録されているシートオブジェクトの列挙を取得します。
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:PA.Office.ExcelObjects.ExcelChartType">
+ <summary>
+ EXCELグラフの種類を表します。
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:PA.Office.ExcelObjects.ExcelChartType.LineMarkers">
+ <summary>
+ 折れ線グラフ
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.GetSheetByName(System.String)">
+ <summary>
+ シート名によって、シートインスタンスを取得する。
+ </summary>
+ <param name="sheetName"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.GetNameOfSheet(System.Object)">
+ <summary>
+ シートの名前を取得する
+ </summary>
+ <param name="sheet"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.GetExcelRange(System.Object,System.Object)">
+ <summary>
+ パラメータCell1Cell2によってワークシートのRangeオブジェクトを取得する
+ </summary>
+ <param name="sheet"></param>
+ <param name="Cell1Cell2"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.GetRangeBorders(System.Object)">
+ <summary>
+ rangeのBordersを取得する。
+ </summary>
+ <param name="range"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.SetBordersLineStyle(System.Object,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+ <summary>
+ 罫線の線のスタイルを設定します。
+ </summary>
+ <param name="borders"></param>
+ <param name="XlLineStyleDown"></param>
+ <param name="XlLineStyleUp"></param>
+ <param name="XlLineStyleLeft"></param>
+ <param name="XlLineStyleTop"></param>
+ <param name="XlLineStyleBottom"></param>
+ <param name="XlLineStyleRight"></param>
+ <remarks></remarks>
+</member>
+<member name="T:PA.Office.ExcelObjects.ExcelFileSingleton.XlBordersIndex">
+ <summary>
+ 罫線の列挙型
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.SetBorderLineStyle(System.Object,System.Int32)">
+ <summary>
+ 罫線の線のスタイルを設定する。
+ </summary>
+ <param name="border"></param>
+ <param name="xlLineStyle"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.GetRangeBorder(System.Object,System.Int32)">
+ <summary>
+ 罫線を取得す売る。
+ </summary>
+ <param name="borders"></param>
+ <param name="index"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.GetRangeInterior(System.Object)">
+ <summary>
+ Interior 型オブジェクトを取得する
+ </summary>
+ <param name="range"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.GetRangeFont(System.Object)">
+ <summary>
+ Rangeのフォント属性を取得する
+ </summary>
+ <param name="range"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.GetRangeValue(System.Object)">
+ <summary>
+ RangeのValue属性を取得する
+ </summary>
+ <param name="range"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.SetRangeInteriorColor(System.Object,System.Object)">
+ <summary>
+ 指定したinteriorオブジェクトの色を設定する
+ </summary>
+ <param name="interior"></param>
+ <param name="color"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.SetRangeInteriorColorIndex(System.Object,System.Object)">
+ <summary>
+ 指定したinteriorオブジェクトの色コードを設定する
+ </summary>
+ <param name="interior"></param>
+ <param name="colorIndex"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.SetRangeFontColor(System.Object,System.Object)">
+ <summary>
+ 指定したフォントオブジェクトの色を設定する
+ </summary>
+ <param name="font"></param>
+ <param name="color"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.SetRangeFontColorIndex(System.Object,System.Object)">
+ <summary>
+ 指定したフォントオブジェクトの色コードを設定する。
+ </summary>
+ <param name="font"></param>
+ <param name="colorIndex"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.SetRangeValue(System.Object,System.Object)">
+ <summary>
+ 指定したRangeのValueを設定する
+ </summary>
+ <param name="range"></param>
+ <param name="value"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.RangeCopy(System.Object,System.Object)">
+ <summary>
+ 指定したrangeSourceをrangeDestにコピーする
+ </summary>
+ <param name="rangeSource"></param>
+ <param name="rangeDest"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.rangeInsert(System.Object)">
+ <summary>
+ 指定したRangeのInsertメソッドを呼び出す。
+ </summary>
+ <param name="range"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.CloseBook(System.Object)">
+ <summary>
+ 指定したワークブックを閉じる
+ </summary>
+ <param name="book"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.KillExcelProcess">
+ <summary>
+ 主Windowを持っていないExcelのProcessをキールする。
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.QuitApp(System.Object)">
+ <summary>
+ Microsoft Excel を終了します。 
+ </summary>
+ <param name="app"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.ReleaseComObject(System.Object@)">
+ <summary>
+ COMオブジェクトを解放する
+ </summary>
+ <param name="obj"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.SetCellBgColor(System.Object,PA.Office.ExcelObjects.ExcelCellObject)">
+ <summary>
+ セル単位で背景色を設定する。
+ </summary>
+ <param name="sheet"></param>
+ <param name="cell"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.WriteCellToSheet(System.Object,PA.Office.ExcelObjects.ExcelCellObject)">
+ <summary>
+ 指定したワークシートに指定したセルの値とか、背景色とか、フォント色とか設定する。
+ </summary>
+ <param name="sheet"></param>
+ <param name="cell"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.WriteImageToSheet(System.Object,PA.Office.ExcelObjects.ExcelImageObject)">
+ <summary>
+ 指定したワークシートに指定したセルに、画像情報を出力する。
+ </summary>
+ <param name="sheet"></param>
+ <param name="image"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.GetCellData(System.Object,System.Int32,System.Int32)">
+ <summary>
+ 指定したワークシート、行インデックス、列インデックスでセルの情報を取得する。
+ </summary>
+ <param name="sheet"></param>
+ <param name="rowIndex"></param>
+ <param name="colIndex"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.SetSheetName(System.Object,System.String)">
+ <summary>
+ シートの名前を設定する。
+ </summary>
+ <param name="sheet">シート</param>
+ <param name="sheetName">シート名</param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.OpenExcel(System.String)">
+ <summary>
+ 指定したファイルパスで、Excelファイルを読み込みます。
+ </summary>
+ <param name="filePath">読み込みパス</param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.CloseExcel">
+ <summary>
+ 該当ExcelファイルについてのCOMオブジェクトを解放する。
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.SheetRangeCopy(System.String,System.String,System.String)">
+ <summary>
+ 指定のファイルパスの指定シートには 指定範囲sourceを指定範囲destにコピーする
+ </summary>
+ <param name="sheetName">指定シート名前</param>
+ <param name="rangeSource">指定範囲source</param>
+ <param name="rangeDest">指定範囲dest</param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.WriterCellsToSheet(System.String,System.Collections.Generic.List{PA.Office.ExcelObjects.ExcelCellObject})">
+ <summary>
+ 指定したワークシートにデータを出力する。
+ </summary>
+ <param name="sheetName">シート名</param>
+ <param name="cells">出力データ「List(Of ExcelCellObject)型」</param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.WriteRowsToSheet(System.String,System.Collections.Generic.List{PA.Office.ExcelObjects.ExcelRowObject})">
+ <summary>
+ 指定したワークシートに、データを出力する。
+ 出力データが多い場合、性能が悪くなったので、WriteRowsToSheetByArrayを利用してください。
+ </summary>
+ <param name="sheetName">シート名</param>
+ <param name="rows">出力データ「List(Of ExcelRowObject)型」</param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.ReadRowData(System.String,System.Int32,System.Int32,System.Int32)">
+ <summary>
+ 指定したワークシートの指定した行、指定した列から指定した列までの情報を取得する。
+ </summary>
+ <param name="sheetName">シート名</param>
+ <param name="rowIndex">開始行</param>
+ <param name="colIndexFrom">開始列</param>
+ <param name="colIndexTo">終了列</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.ReadRowsData(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+ <summary>
+ 指定したワークシートの指定した範囲から情報を取得する。
+ </summary>
+ <param name="sheetName">シート名</param>
+ <param name="keyCol">キー列</param>
+ <param name="startRowIndex">開始行</param>
+ <param name="colFrom">開始列</param>
+ <param name="colTo">終了列</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.ReadCellsData(System.String,System.Collections.Generic.List{PA.Office.ExcelObjects.ExcelCellObject})">
+ <summary>
+ 指定したシートの指定したcells情報を読み込みます。
+ </summary>
+ <param name="sheetName"></param>
+ <param name="cells"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.GetSheetNames">
+ <summary>
+ 該当ワークブックの全部のシート名を取得する。
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.InsertRowOfSheet(System.String,System.Int32,System.Int32)">
+ <summary>
+ 指定したワークシートの指定した行に新しい行を挿入する。
+ </summary>
+ <param name="sheetName"></param>
+ <param name="rowIndex"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.InsertColOfSheet(System.String,System.String,System.Int32)">
+ <summary>
+ 指定したワークシートの指定した列に新しい列を挿入する。
+ </summary>
+ <param name="sheetName"></param>
+ <param name="colIndex"></param>
+ <param name="count"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.AddWorksheetAfter(System.String,System.String)">
+ <summary>
+ 指定したシート名「afterSheetName」の後に、「sheetName」というシートを挿入する。
+ </summary>
+ <param name="sheetName"></param>
+ <param name="afterSheetName"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.WriteImagesToSheet(System.String,System.Collections.Generic.List{PA.Office.ExcelObjects.ExcelImageObject})">
+ <summary>
+ 指定したワークシートに、データを出力する。
+ </summary>
+ <param name="sheetName">シート名</param>
+ <param name="images">出力データ「List(Of ExcelRowObject)型」</param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.WorksheetSelect(System.String)">
+ <summary>
+ 指定したシートを選択する。
+ </summary>
+ <param name="sheetName"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.SetRangeLineStyle(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+ <summary>
+ 罫線の線のスタイルの設定する。
+ </summary>
+ <param name="sheetName"></param>
+ <param name="signature"></param>
+ <param name="down"></param>
+ <param name="up"></param>
+ <param name="left"></param>
+ <param name="top"></param>
+ <param name="bottom"></param>
+ <param name="right"></param>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelObjects.ExcelFileSingleton.WriteRowsToSheetByArray(System.String,System.Collections.Generic.List{PA.Office.ExcelObjects.ExcelRowObject},System.Int32,System.Int32)">
+ <summary>
+ 出力データが数多い場合、性能が良くなる為に、
+ 配列でデータをExcelファイルに出力するように
+ </summary>
+ <param name="sheetName">シート名</param>
+ <param name="rows">出力詳細データ</param>
+ <param name="startRowIndex">開始行番号</param>
+ <param name="startColIndex">開始列番号</param>
+ <remarks></remarks>
+</member>
+<member name="T:PA.Office.ExcelObjects.xlLineStyle">
+ <summary>
+ 罫線の線の種類の列挙型
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:PA.Office.ExcelObjects.xlLineStyle.xlContinuous">
+ <summary>
+ 実線
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:PA.Office.ExcelObjects.xlLineStyle.xlNone">
+ <summary>
+ 何もない
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:PA.Office.ExcelObjects.ExcelImageObject">
+ <summary>
+ EXCELの画像情報を格納します。
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelImageObject.ImageData">
+ <summary>
+ Image型の画像データ
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelImageObject.RowIndex">
+ <summary>
+ セルの行のインデックス（画像表示用）
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelObjects.ExcelImageObject.ColIndex">
+ <summary>
+ セルの列のインデックス（画像表示用）
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:PA.Office.ExcelReader">
+ <summary>
+ EXCELファイルを操作するための機能を提供するクラス。
+ </summary>
+ <remarks>
+ <para>このクラスでは、EXCELを操作するためのプロパティおよびメソッドを提供しています。</para>
+ <para>
+ <paramref name="Load" />メソッドを使用すると、EXCELファイルの1ブック1シートを読み込み、このクラスのDataTableに格納します。
+ DataTable編集をして<paramref name="Save" />メソッドを使用すると、EXCELファイルに編集内容を更新します。
+ </para>
+ 
+ </remarks>
+</member>
+<member name="F:PA.Office.ExcelReader.MaxRowCount">
+ <summary>
+ Excelの最大行数
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelReader.#ctor(System.String)">
+ <summary>
+ コンストラクタ。このExcelオブジェクトで操作するEXCELのファイルを指定します。
+ </summary>
+ <param name="filepath">EXCELファイルのフルパス</param>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelReader.FilePath">
+ <summary>
+ Excelファイルのフルパスを取得、設定します。
+ </summary>
+ <value>Excelファイルのフルパス</value>
+ <returns>Excelファイルのフルパス</returns>
+ <remarks>
+ <para>このオブジェクトで操作するExcelファイルのフルパスを取得、設定します。</para>    
+ <para>この値を変更することにより、読み込み、書き込み対象のファイルを変更します。</para>    
+ </remarks>
+</member>
+<member name="P:PA.Office.ExcelReader.SheetName">
+ <summary>
+ Excelシートの名前を設定、取得します。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks>
+ <para>Excelシートの名前を設定、または取得します。Loadメソッド実行前は、Null（Visual Basicの場合はNothing）が設定されています。</para>	
+ </remarks>
+</member>
+<member name="P:PA.Office.ExcelReader.SheetData(System.Int32,System.Int32)">
+ <summary>
+ Excelのセルの内容を設定、取得します。
+ </summary>
+ <param name="row">行番号 1～</param>
+ <param name="col">列番号 1～</param>
+ <value>セルにセットする値</value>
+ <returns>セルから取得した値</returns>
+ <remarks></remarks>
+</member>
+<member name="P:PA.Office.ExcelReader.EndRowIndex">
+ <summary>
+ <see cref="M:PA.Office.ExcelReader.Load(System.Int32,System.Int32)"/> で取得した行数を取得します。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks>
+ <para>Excelから読み込んだ行数を取得します。この数値は <see cref="P:PA.Office.ExcelReader.SheetData(System.Int32,System.Int32)"/> の row の最大値となります。</para>
+ <para>なお、Loadメソッドで読み込み行数を指定したときは、その数値が登録されます。</para>	
+ <para>Loadする前の値は0です。</para>	
+ </remarks>
+</member>
+<member name="P:PA.Office.ExcelReader.EndColumnIndex">
+ <summary>
+ <see cref="M:PA.Office.ExcelReader.Load(System.Int32,System.Int32)"/> で取得した行数を取得します。
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks>
+ <para>Excelから読み込んだ行数を取得します。この数値は <see cref="P:PA.Office.ExcelReader.SheetData(System.Int32,System.Int32)"/> の column の最大値となります。</para>
+ <para>Loadメソッドで読み込み列数を指定するので、その数値と必ず等しくなります。</para>	
+ <para>Loadする前の値は0です。</para>	
+ </remarks>
+</member>
+<member name="M:PA.Office.ExcelReader.InitializeNewSheet(System.Int32,System.Int32,System.Int32)">
+ <summary>
+ Excelファイルの新規シートを作成します。
+ </summary>
+ <param name="sheetIndex"></param>
+ <param name="columnCount"></param>
+ <param name="rowCount"></param>
+ <remarks>
+ <para>Excelファイルの新規シートを作成します。</para> 
+ <para>編集した内容Save()メソッドにて保存することができます。</para>       
+ </remarks>
+</member>
+<member name="M:PA.Office.ExcelReader.GetSheetCount">
+ <summary>
+ ブックに登録されているシートの数を取得します。
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelReader.Load(System.Int32,System.Int32)">
+ <summary>
+ Excelファイルを読み込み、ファイルの内容をこのオブジェクトに展開します。
+ </summary>
+ <param name="sheetIndex">シート番号</param>
+ <param name="columnCount">読み込む列数</param>
+ <remarks>
+ <para>Excelのファイルを読み込みます。値、書式などをこのオブジェクトの配列プロパティにて設定します。</para>
+ <para>行内の全てのセルが空白になった時点で読み込みを終了します。空白行以降の内容は一切読み込まれないことに注意して下さい。</para>	
+ </remarks>
+</member>
+<member name="M:PA.Office.ExcelReader.Load(System.Int32,System.Int32,System.Int32)">
+ <summary>
+ Excelファイルを読み込み、ファイルの内容をこのクラスに展開します。
+ </summary>
+ <param name="sheetIndex">シート番号</param>    
+ <param name="columnCount">読み込む列数</param>    
+ <param name="rowCount">書き込む列数</param>    
+ <remarks>
+ <para>Excelのファイルを読み込みます。値、書式などをこのオブジェクトの配列プロパティにて設定します。</para>    
+ </remarks>
+</member>
+<member name="M:PA.Office.ExcelReader.ToString">
+ <summary>
+ このオブジェクトの内容を表す文字列を取得します。
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelReader.getCellSignature(System.Int32,System.Int32)">
+ <summary>
+ 行と列の番号から、EXCELセル名称を取得します。
+ </summary>
+ <param name="columnCount"></param>
+ <param name="rowCount"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:PA.Office.ExcelReader.GetColumnSignature(System.Int32)">
+ <summary>
+ 列の番号から、EXCEL列名称を取得します。
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

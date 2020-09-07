@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="MS UI Gothic" Size="9" />
+  <Class Name="PA.Office.ExcelObjects.ExcelFileWriter" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ExcelObjects\ExcelFileWriter..vb</FileName>
+      <HashCode>AAAAAAAACQAAARAAAAAYAAgYIAAACAAAABAhAAgJQAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

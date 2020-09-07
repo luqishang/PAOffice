@@ -1,0 +1,10 @@
+D:\Project\2_PA.Office\PA.OfficeAllVersion\bin\Release\PA.Office.dll
+D:\Project\2_PA.Office\PA.OfficeAllVersion\bin\Release\PA.Office.pdb
+D:\Project\2_PA.Office\PA.OfficeAllVersion\bin\Release\PA.Office.xml
+D:\Project\2_PA.Office\PA.OfficeAllVersion\obj\Release\PA.OfficeAllVersion.vbproj.ResolveComReference.cache
+D:\Project\2_PA.Office\PA.OfficeAllVersion\obj\Release\PA.Office.Resources.resources
+D:\Project\2_PA.Office\PA.OfficeAllVersion\obj\Release\PA.OfficeAllVersion.vbproj.GenerateResource.cache
+D:\Project\2_PA.Office\PA.OfficeAllVersion\obj\Release\PA.OfficeAllVersion.vbproj.CoreCompileInputs.cache
+D:\Project\2_PA.Office\PA.OfficeAllVersion\obj\Release\PA.Office.dll
+D:\Project\2_PA.Office\PA.OfficeAllVersion\obj\Release\PA.Office.xml
+D:\Project\2_PA.Office\PA.OfficeAllVersion\obj\Release\PA.Office.pdb

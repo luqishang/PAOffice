@@ -1,0 +1,16 @@
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\bin\Release\templete.xls
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\bin\Release\PA.OfficeAllVersion.TestForm.exe
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\bin\Release\PA.OfficeAllVersion.TestForm.pdb
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\bin\Release\PA.OfficeAllVersion.TestForm.xml
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\bin\Release\PA.Office.dll
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\bin\Release\PA.Office.pdb
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\bin\Release\PA.Office.xml
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\obj\Release\PA.OfficeAllVersion.TestForm.vbprojAssemblyReference.cache
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\obj\Release\PA.OfficeAllVersion.TestForm.Form1.resources
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\obj\Release\PA.OfficeAllVersion.TestForm.Resources.resources
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\obj\Release\PA.OfficeAllVersion.TestForm.vbproj.GenerateResource.cache
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\obj\Release\PA.OfficeAllVersion.TestForm.vbproj.CoreCompileInputs.cache
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\obj\Release\PA.OfficeAllVersion.TestForm.vbproj.CopyComplete
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\obj\Release\PA.OfficeAllVersion.TestForm.exe
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\obj\Release\PA.OfficeAllVersion.TestForm.xml
+D:\Project\2_PA.Office\PA.OfficeAllVersion.TestForm\obj\Release\PA.OfficeAllVersion.TestForm.pdb
