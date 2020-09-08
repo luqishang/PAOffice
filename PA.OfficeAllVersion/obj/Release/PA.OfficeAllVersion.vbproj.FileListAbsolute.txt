@@ -8,3 +8,4 @@ D:\Project\2_PA.Office\PA.OfficeAllVersion\obj\Release\PA.OfficeAllVersion.vbpro
 D:\Project\2_PA.Office\PA.OfficeAllVersion\obj\Release\PA.Office.dll
 D:\Project\2_PA.Office\PA.OfficeAllVersion\obj\Release\PA.Office.xml
 D:\Project\2_PA.Office\PA.OfficeAllVersion\obj\Release\PA.Office.pdb
+D:\Project\2_PA.Office\PA.OfficeAllVersion\obj\Release\PA.OfficeAllVersion.vbprojAssemblyReference.cache

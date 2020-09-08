@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "naHEI3AALVvUJhY7e6YXZ+d6XL8ZK6X10ouOiNRIMFI2WX8lHkRFX2d3QVNzEVYHV2E4RzhVLSmrdvPIX6yeow==",
+  "success": true,
+  "projectFilePath": "D:\\Project\\2_PA.Office\\PA.OfficePositionAttributes\\PA.OfficePositionAttributes.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\P0140431\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\P0140431\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

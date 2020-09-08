@@ -1,0 +1,9 @@
+D:\Project\2_PA.Office\PA.OfficePositionAttributes\obj\Release\netstandard2.0\PA.OfficePositionAttributes.AssemblyInfoInputs.cache
+D:\Project\2_PA.Office\PA.OfficePositionAttributes\obj\Release\netstandard2.0\PA.OfficePositionAttributes.AssemblyInfo.cs
+D:\Project\2_PA.Office\PA.OfficePositionAttributes\obj\Release\netstandard2.0\PA.OfficePositionAttributes.csproj.CoreCompileInputs.cache
+D:\Project\2_PA.Office\PA.OfficePositionAttributes\bin\Release\netstandard2.0\PA.OfficePositionAttributes.deps.json
+D:\Project\2_PA.Office\PA.OfficePositionAttributes\bin\Release\netstandard2.0\PA.OfficePositionAttributes.dll
+D:\Project\2_PA.Office\PA.OfficePositionAttributes\bin\Release\netstandard2.0\PA.OfficePositionAttributes.pdb
+D:\Project\2_PA.Office\PA.OfficePositionAttributes\obj\Release\netstandard2.0\PA.OfficePositionAttributes.dll
+D:\Project\2_PA.Office\PA.OfficePositionAttributes\obj\Release\netstandard2.0\PA.OfficePositionAttributes.pdb
+D:\Project\2_PA.Office\PA.OfficePositionAttributes\obj\Release\netstandard2.0\PA.OfficePositionAttributes.csprojAssemblyReference.cache
