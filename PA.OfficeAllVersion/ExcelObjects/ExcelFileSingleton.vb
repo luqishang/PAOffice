@@ -6,7 +6,7 @@
 '                    STAモードで使用してください。またExcelFileSingletonのオブジェクトをLockしてください。
 '  更新履歴        ：新規作成  2008/10/24  wcheng
 '
-'  Copyright (C)  2008  Proassist.Ltd.
+'  Copyright (C)  2008  Pactera.Ltd.
 ' =============================================================================
 Imports System.Text
 Imports System.Reflection
@@ -224,7 +224,7 @@ Namespace ExcelObjects
         End Sub
 
         ''' <summary>
-        ''' 罫線を取得す売る。
+        ''' 罫線を取得する。
         ''' </summary>
         ''' <param name="borders"></param>
         ''' <param name="index"></param>
@@ -392,13 +392,13 @@ Namespace ExcelObjects
         ''' </summary>
         ''' <param name="range"></param>
         ''' <remarks></remarks>
-        Private Sub rangeInsert(ByVal range As Object)
+        Private Sub RangeInsert(ByVal range As Object)
 
-            range.GetType().InvokeMember( _
-                       "Insert", _
-                       BindingFlags.InvokeMethod, _
-                       Nothing, _
-                       range, _
+            range.GetType().InvokeMember(
+                       "Insert",
+                       BindingFlags.InvokeMethod,
+                       Nothing,
+                       range,
                        Nothing)
 
         End Sub

@@ -9,8 +9,8 @@ Imports System.Runtime.InteropServices
 ' アセンブリ属性の値を確認します。
 
 <Assembly: AssemblyTitle("PA.Office")> 
-<Assembly: AssemblyDescription("MS-Office製品をコントロールする部品群")> 
-<Assembly: AssemblyCompany("株式会社プロアシスト")> 
+<Assembly: AssemblyDescription("MS-Office製品をコントロールする部品群")>
+<Assembly: AssemblyCompany("Pactera")>
 <Assembly: AssemblyProduct("PA.Office")> 
 <Assembly: AssemblyCopyright("Copyright (C)  2006")> 
 <Assembly: AssemblyTrademark("")> 
