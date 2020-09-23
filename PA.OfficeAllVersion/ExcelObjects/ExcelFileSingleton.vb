@@ -404,6 +404,22 @@ Namespace ExcelObjects
         End Sub
 
         ''' <summary>
+        ''' 指定したRangeのDeleteメソッドを呼び出す。
+        ''' </summary>
+        ''' <param name="range"></param>
+        ''' <remarks></remarks>
+        Private Sub RangeDelete(ByVal range As Object)
+
+            range.GetType().InvokeMember(
+                       "Delete",
+                       BindingFlags.InvokeMethod,
+                       Nothing,
+                       range,
+                       Nothing)
+
+        End Sub
+
+        ''' <summary>
         ''' 指定したワークブックを閉じる
         ''' </summary>
         ''' <param name="book"></param>
@@ -1112,7 +1128,7 @@ Namespace ExcelObjects
         ''' <param name="colIndex"></param>
         ''' <param name="count"></param>
         ''' <remarks></remarks>
-        Public Sub InsertColOfSheet(ByVal sheetName As String, ByVal colIndex As String, ByVal count As Integer)
+        Public Sub InsertColOfSheet(ByVal sheetName As String, ByVal colIndex As Integer, ByVal count As Integer)
 
             If count <= 0 Then
                 Exit Sub
@@ -1126,13 +1142,54 @@ Namespace ExcelObjects
 
                 If (sheet IsNot Nothing) Then
 
-                    Dim cell1cell2 As String = colIndex.ToString() + ":" + colIndex.ToString()
+                    Dim col1 As String = ExcelBookControl.GetColumnSignature(colIndex)
+                    Dim cell1cell2 As String = col1 + ":" + col1
 
                     range = Me.GetExcelRange(sheet, cell1cell2)
 
                     For i As Integer = 1 To count Step 1
-                        rangeInsert(range)
+                        RangeInsert(range)
                     Next
+
+                End If
+
+            Catch ex As Exception
+
+            Finally
+                'COMオブジェクトを解放する
+                ReleaseComObject(range)
+                ReleaseComObject(sheet)
+            End Try
+
+        End Sub
+
+        ''' <summary>
+        ''' 指定したワークシートの指定した列以降、指定した列数の列を削除する。
+        ''' </summary>
+        ''' <param name="sheetName"></param>
+        ''' <param name="colIndex"></param>
+        ''' <param name="count"></param>
+        ''' <remarks></remarks>
+        Public Sub DeleteColOfSheet(ByVal sheetName As String, ByVal colIndex As Integer, ByVal count As Integer)
+
+            If count <= 0 Then
+                Exit Sub
+            End If
+
+            Dim sheet As Object = Nothing
+            Dim range As Object = Nothing
+
+            Try
+                sheet = Me.GetSheetByName(sheetName)
+
+                If (sheet IsNot Nothing) Then
+
+                    Dim col1 As String = ExcelBookControl.GetColumnSignature(colIndex + 1)
+                    Dim col2 As String = ExcelBookControl.GetColumnSignature(colIndex + count)
+                    Dim cell1cell2 As String = col1 + ":" + col2
+
+                    range = Me.GetExcelRange(sheet, cell1cell2)
+                    RangeDelete(range)
 
                 End If
 
