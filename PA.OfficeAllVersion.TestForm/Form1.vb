@@ -384,7 +384,7 @@ Public Class Form1
 
             'excelSingleton.WriteRowsToSheetByArray(sheetName, rows, 8, 2)
 
-            excelSingleton.InsertColOfSheet(sheetName, "D", 3)
+            excelSingleton.InsertColOfSheet(sheetName, 8, 3)
 
         Finally
             excelSingleton.CloseExcel()

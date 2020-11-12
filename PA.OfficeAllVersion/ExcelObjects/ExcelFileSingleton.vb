@@ -696,11 +696,11 @@ Namespace ExcelObjects
 
 #Region "public メソッド"
 
-        ''' <summary>
-        ''' 指定したファイルパスで、Excelファイルを読み込みます。
-        ''' </summary>
-        ''' <param name="filePath">読み込みパス</param>
-        ''' <remarks></remarks>
+        '' <summary>
+        '' 指定したファイルパスで、Excelファイルを読み込みます。
+        '' </summary>
+        '' <param name="filePath">読み込みパス</param>
+        '' <remarks></remarks>
         Public Sub OpenExcel(ByVal filePath As String)
 
             Try
@@ -709,78 +709,78 @@ Namespace ExcelObjects
                 If m_application Is Nothing Then
                     m_application = Activator.CreateInstance(Type.GetTypeFromProgID("Excel.Application"))
 
-                    m_application.GetType().InvokeMember( _
-                    "Visible", _
-                    BindingFlags.SetProperty, _
-                    Nothing, _
-                    m_application, _
+                    m_application.GetType().InvokeMember(
+                    "Visible",
+                    BindingFlags.SetProperty,
+                    Nothing,
+                    m_application,
                     New Object() {False})
 
-                    m_application.GetType().InvokeMember( _
-                        "ScreenUpdating", _
-                        BindingFlags.SetProperty, _
-                        Nothing, _
-                        m_application, _
+                    m_application.GetType().InvokeMember(
+                        "ScreenUpdating",
+                        BindingFlags.SetProperty,
+                        Nothing,
+                        m_application,
                     New Object() {False})
 
-                    m_application.GetType().InvokeMember( _
-                         "DisplayAlerts", _
-                         BindingFlags.SetProperty, _
-                         Nothing, _
-                         m_application, _
+                    m_application.GetType().InvokeMember(
+                         "DisplayAlerts",
+                         BindingFlags.SetProperty,
+                         Nothing,
+                         m_application,
                          New Object() {False})
-                    m_application.GetType().InvokeMember( _
-                         "AlertBeforeOverwriting", _
-                         BindingFlags.SetProperty, _
-                         Nothing, _
-                         m_application, _
+                    m_application.GetType().InvokeMember(
+                         "AlertBeforeOverwriting",
+                         BindingFlags.SetProperty,
+                         Nothing,
+                         m_application,
                          New Object() {False})
                 End If
 
                 ' ブックの新規作成・開く
                 If m_books Is Nothing Then
-                    m_books = m_application.GetType().InvokeMember( _
-                                         "Workbooks", _
-                                         BindingFlags.GetProperty, _
-                                         Nothing, _
-                                         m_application, _
+                    m_books = m_application.GetType().InvokeMember(
+                                         "Workbooks",
+                                         BindingFlags.GetProperty,
+                                         Nothing,
+                                         m_application,
                                          Nothing)
                 End If
 
                 If (File.Exists(filePath)) Then
-                    m_book = m_books.GetType().InvokeMember( _
-                       "Open", _
-                       BindingFlags.InvokeMethod, _
-                       Nothing, _
-                       m_books, _
+                    m_book = m_books.GetType().InvokeMember(
+                       "Open",
+                       BindingFlags.InvokeMethod,
+                       Nothing,
+                       m_books,
                        New Object() {filePath})
 
-                    m_sheets = m_book.GetType().InvokeMember( _
-                       "Worksheets", _
-                       BindingFlags.GetProperty, _
-                       Nothing, _
-                       m_book, _
+                    m_sheets = m_book.GetType().InvokeMember(
+                       "Worksheets",
+                       BindingFlags.GetProperty,
+                       Nothing,
+                       m_book,
                        Nothing)
 
                     Dim sheetsCountMax As Integer _
-                         = DirectCast( _
-                          m_sheets.GetType().InvokeMember( _
-                           "Count", _
-                           BindingFlags.GetProperty, _
-                           Nothing, _
-                           m_sheets, _
-                           Nothing), _
+                         = DirectCast(
+                          m_sheets.GetType().InvokeMember(
+                           "Count",
+                           BindingFlags.GetProperty,
+                           Nothing,
+                           m_sheets,
+                           Nothing),
                           Integer)
 
                     For i As Integer = 1 To sheetsCountMax
 
                         ' 既存ファイルにシートがある場合
-                        m_sheetList.Add( _
-                         m_sheets.GetType().InvokeMember( _
-                          "Item", _
-                          BindingFlags.GetProperty, _
-                          Nothing, _
-                          m_sheets, _
+                        m_sheetList.Add(
+                         m_sheets.GetType().InvokeMember(
+                          "Item",
+                          BindingFlags.GetProperty,
+                          Nothing,
+                          m_sheets,
                           New Object() {i}))
 
                     Next
@@ -793,9 +793,12 @@ Namespace ExcelObjects
                 'Excelについてのクローズ処理
                 CloseExcel()
 
+                Throw ex
+
             End Try
 
         End Sub
+
 
         ''' <summary>
         ''' 該当ExcelファイルについてのCOMオブジェクトを解放する。

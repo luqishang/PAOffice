@@ -34,11 +34,13 @@ Namespace ExcelObjects
 
 
 			Catch ex As Exception
-				ex.ToString()
+
 				Dim excels As Process() = Process.GetProcessesByName("EXCEL")
 				For Each x As Process In excels
 					x.Kill()
 				Next
+				Throw ex
+
 			Finally
 				If book IsNot Nothing Then
 					book.Close(True)
